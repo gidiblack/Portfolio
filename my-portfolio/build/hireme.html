@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css"/>
+    <script src="https://kit.fontawesome.com/93c48aecb0.js" crossorigin="anonymous"></script>
+    <title>Hire Gideon</title>
+</head>
+<body>
+    <header class="hireme-header">
+        <nav class="nav-bar">
+            <div class="container">
+                <ul class="main-nav">
+                    <li><a class="logo" href="index.html"><img src="assets/img/gidi-logo.png"></a></li>
+                    <div id="responsive-nav" class="responsive-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="#" class="cta"><button class="btn-accent">Download CV</button></a></li>
+                    </div>
+                    <li class="menu-toggle">
+                        <div class="hamburger"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container hireme">
+            <h1 class="text-center">Hire Me</h1>
+            <p class="text-center"><em>"I am currently <span class="heading">accepting</span> new freelance projects"</em></p>
+        </div>
+    </header>
+    <main>
+        <div class="container questionnaire text-center">
+            <h2 class="heading">Questionnaire</h2>
+            <p>Requesting an estimate for a project only takes a few minutes of your time and costs absolutely nothing. This questionnaire was built to help me identify your needs for the project.</p>
+            <p>After you click the send button, I will send you an estimate within 48 hours for a review.</p>
+        </div>
+        <section class="container" id="form-section">
+            <form class="row" id="questionnaire">
+                <div class="form-group col-sm-6">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="emailaddress">Your email address</label>
+                    <input type="email" class="form-control" id="emailaddress" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="website">Your website, if you have one</label>
+                    <input type="url" class="form-control" name="website" id="website" placeholder="https://" >
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="location">Your Location</label>
+                    <input type="text" name="location" id="location" class="form-control" placeholder="e.g. Lagos, London, Chicago" required>
+                    <small>I ask this only to know your timezone</small>
+                </div>
+                <h3 class="heading col-sm-12">What can I help you with?</h3>
+                <div class="col-md-6 form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="web-design" id="web-design" name="service">
+                        <label class="form-check-label" for="web-design">
+                        Web Design
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="web-development" id="web-development" name="service">
+                        <label class="form-check-label" for="web-development">
+                        Web Development
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="app-design" id="app-design" name="service">
+                        <label class="form-check-label" for="app-design">
+                        Mobile App Design
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="">Is this a new project or a redesign for an existing site / brand</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="new-project" value="New project" name="project-type">
+                        <label class="form-check-label" for="new-project">
+                        New project
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="redesign" value="Redesign" name="project-type">
+                        <label class="form-check-label" for="redesign">
+                        Redesign
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="timeline"><strong>Timeline.</strong> When do you need the project completed by?</label>
+                    <input type="text" name="timeline" id="timeline" class="form-control" required>
+                    <small>I recommend at least 3 weeks for most projects, to ensure the appropriate research and creative output is the best it can be.</small>
+                </div>
+                <div class="form-group col-md-6">
+                <label for="budget"><strong>Budget.</strong> How much are you planning to invest in the project? (NGN)</label>
+                <input type="text" name="budget" id="budget" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="project-audience">Why is the project needed? Who is the target audience?</label>
+                    <textarea name="target-audience" id="target-audience" class="form-control" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="project-audience">Please provide any additional details about the project</label>
+                    <textarea name="target-audience" id="target-audience" class="form-control" cols="30" rows="10"></textarea>
+                    <small>Personal preference, a list of good and bad examples, colors, overall message, competitors in your field, etc</small>
+                </div>
+                <button type="submit" id="submit" class="btn btn-accent">submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container text-center">
+            <p>&copy Gideon Etim 2020</p>
+            <a href="https://twitter.com/tha_gidi" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://github.com/gidiblack" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.instagram.com/tha_gidi/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/gideon-etim-6534a7187/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=2347081641910&text=&source=&data=" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+<script src="./assets/js/vendors.js"></script>
+<script src="./assets/js/app.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#questionnaire").validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                "project-type": "required",
+                service: "required"
+            }
+        });
+
+        // $("#submit").click(function(){
+        //     let name = $("#name").val();
+        //     let email = $("#emailaddres").val();
+
+        //     let varData = "name = " + name + " email = " + email;
+
+        //     $.ajax({
+        //        type: "POST",
+        //        url: 'php.php',
+        //        data: varData,
+        //        success: function(){
+        //            alert("Thank you for your consideration")
+        //        } 
+        //     });
+            
+        // });
+    }); 
+</script>
+</html>

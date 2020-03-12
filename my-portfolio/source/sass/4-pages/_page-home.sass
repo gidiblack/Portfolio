@@ -1,0 +1,106 @@
+.home-header
+    background: url("../img/hero-bg.jpg") no-repeat
+    background-size: cover
+    background-position: center
+    height: 500px
+    position: relative
+    .hero    
+        padding: 6rem 0
+    p 
+        margin-bottom: 0
+        font-size: 20px
+        font-weight: 500
+    h1 
+        margin: 12px 0
+
+#about
+    background: #292525
+    padding: 3rem 0
+    .about-img
+        border: 1px solid #de9e2c
+        width: 220px
+        height: 220px  
+        float: left
+        position: relative
+        top: 16px
+        right: 16px
+        margin-right: 60px
+    img
+        position: relative
+        width: 220px
+        height: auto
+        margin: 0px 60px 0px 0px
+        box-shadow: 8px 6px 6px rgba(0,0,0,0.4)
+        bottom: 16px
+        left: 16px
+    .aboutdiv
+       padding: 2rem 10rem
+    .btn-accent
+        border: 0
+
+#services
+    padding: 2rem 0
+    .service
+        img
+            width: auto
+            height: 100px
+            margin: 16px 0
+
+#latest-works
+    padding: 2rem 0
+    .project
+        margin: 16px 0
+        overflow: hidden
+        transition: all .2s ease
+        text-align: center
+        img
+            width: 100%
+        .btn-accent
+            padding: 10px 16px
+            border: 0px
+            color: #ffffff
+            font-size: 16px
+            margin: 12px 0
+    .project-desc
+        text-align: center
+        color: #ffffff
+        p
+            font-size: 20px
+            font-weight: 600
+            margin-bottom: 10px
+
+#jumbotron
+    background: #de9e2c
+    padding: 2rem
+    h2, h3, p
+        color: black
+        text-align: center
+    h3
+        font-size: 44px
+        margin-bottom: 24px
+    .btn-accent
+        background-color: #de9e2c
+        border-color: black
+        color: black
+        display: block
+        margin: 0 auto
+    .btn-accent:hover
+        background-color: black
+    a
+        text-decoration: none
+
+@media screen and (max-width: 768px)
+    .home-header
+        height: 440px
+    .aboutdiv
+        padding: 2rem!important
+        text-align: center
+        .about-img
+            margin: 50px auto!important
+            float: none!important
+    #jumbotron h3
+        font-size: 32px
+    footer p
+        font-size: 15px
+    footer.fab
+        font-size: 1.5rem
