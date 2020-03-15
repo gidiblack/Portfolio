@@ -1,10 +1,10 @@
-	Gidi's Starter Architecture using Gulp and Sass.
+	Gidi's Starter Architecture using SASS.
 
-1. Check that Node and Gulp are installed globally.
+1. Check that Node and SASS are installed globally.
 
-2. Run "npm install" inside project dircectory to install dependencies from the package.json file.
+2. Run "sass --watch assets/sass/main.sass:assets/css/style.css" or whatever directory the files are located if there are any changes
 
-3. Run "gulp" inside project directory to preprocess using the prepared gulpfile.js and watch for changes.
+3. Use Ctrl + C to stop watching for changes
 
 3. go to "gitignore.io" and add parameters like your OS, node, sass, etc to create new gitignore file. Copy generated code and save it as ".gitinore" in the main project directory. 
 
