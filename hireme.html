@@ -43,10 +43,10 @@
             <p>After you click the send button, I will send you an estimate within 48 hours for a review.</p>
         </div>
         <section class="container" id="form-section">
-            <form class="row" id="questionnaire">
+            <form class="row" id="questionnaire" name="questionnaire" method="POST" action="form-to-email.php">
                 <div class="form-group col-sm-6">
                     <label for="name">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="emailaddress">Your email address</label>
@@ -111,8 +111,8 @@
                     <textarea name="target-audience" id="target-audience" class="form-control" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="project-audience">Please provide any additional details about the project</label>
-                    <textarea name="target-audience" id="target-audience" class="form-control" cols="30" rows="10"></textarea>
+                    <label for="more-details">Please provide any additional details about the project</label>
+                    <textarea name="more-details" id="more-details" class="form-control" cols="30" rows="10"></textarea>
                     <small>Personal preference, a list of good and bad examples, colors, overall message, competitors in your field, etc</small>
                 </div>
                 <button type="submit" id="submit" class="btn btn-accent">submit</button>
