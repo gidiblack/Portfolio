@@ -564,6 +564,14 @@ footer .fab {
   margin: 10px 16px;
   color: #de9e2c;
 }
+@media screen and (max-width: 760px) {
+  footer .fab {
+    font-size: 1.5rem;
+  }
+  footer p {
+    font-size: 15px;
+  }
+}
 
 .home-header {
   background: url("../img/hero-bg.jpg") no-repeat;
@@ -695,14 +703,6 @@ footer .fab {
   #jumbotron h3 {
     font-size: 32px;
   }
-
-  footer p {
-    font-size: 15px;
-  }
-
-  footer.fab {
-    font-size: 1.5rem;
-  }
 }
 .hireme-header {
   background: url("../img/web-devmac-bg-dark.jpg") no-repeat;
@@ -732,9 +732,10 @@ footer .fab {
 }
 
 #form-section {
+  display: flex;
+  justify-content: center;
   margin: 1.5rem auto;
   width: 80%;
-  padding: 20px;
 }
 #form-section .btn-accent {
   margin: 10px auto;
@@ -780,6 +781,17 @@ footer .fab {
   #form-section .btn-accent {
     padding: 10px 60px;
   }
+}
+.freebirdFormviewerViewNavigationButtons {
+  margin: 0 auto;
+}
+
+.freebirdFormviewerViewNavigationPasswordWarning {
+  display: none;
+}
+
+.freebirdThemedFilledButtonM2 {
+  background-color: #de9e2c;
 }
 
 /*# sourceMappingURL=style.css.map */
