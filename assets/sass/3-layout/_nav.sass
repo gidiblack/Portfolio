@@ -34,11 +34,12 @@
 
 .responsive-nav
     display: flex
+    max-height: none
 
 
 /* CSS hamburger menu */
 .menu-toggle 
-    padding: 1em 0
+    padding: 1em .5em
     position: relative
     cursor: pointer
     z-index: 6
@@ -75,12 +76,18 @@
 
 @media screen and (max-width: 768px)
     .responsive-nav
-        display: none
+        visibility: hidden
+        max-height: 0px
+        li 
+            display: none
     .menu-toggle
         display: block
 
     .responsive-nav.unfold
+        visibility: visible
         display: block
+        max-height: 400px
+        transition: max-height .8s ease-in-out
         width: 100%
         background: #fff
         position: absolute

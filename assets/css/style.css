@@ -331,10 +331,6 @@ img::-moz-selection {
   background: transparent;
 }
 
-body {
-  -webkit-tap-highlight-color: #FFF498;
-}
-
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
@@ -469,11 +465,12 @@ hr {
 
 .responsive-nav {
   display: flex;
+  max-height: none;
 }
 
 /* CSS hamburger menu */
 .menu-toggle {
-  padding: 1em 0;
+  padding: 1em 0.5em;
   position: relative;
   cursor: pointer;
   z-index: 6;
@@ -515,6 +512,10 @@ hr {
 
 @media screen and (max-width: 768px) {
   .responsive-nav {
+    visibility: hidden;
+    max-height: 0px;
+  }
+  .responsive-nav li {
     display: none;
   }
 
@@ -523,7 +524,10 @@ hr {
   }
 
   .responsive-nav.unfold {
+    visibility: visible;
     display: block;
+    max-height: 400px;
+    transition: max-height 0.8s ease-in-out;
     width: 100%;
     background: #fff;
     position: absolute;
@@ -735,7 +739,7 @@ footer .fab {
   display: flex;
   justify-content: center;
   margin: 1.5rem auto;
-  width: 80%;
+  width: 90%;
 }
 #form-section .btn-accent {
   margin: 10px auto;
@@ -778,20 +782,12 @@ footer .fab {
     padding: 0 2.5rem;
   }
 
+  #form-section {
+    width: 100%;
+  }
   #form-section .btn-accent {
     padding: 10px 60px;
   }
-}
-.freebirdFormviewerViewNavigationButtons {
-  margin: 0 auto;
-}
-
-.freebirdFormviewerViewNavigationPasswordWarning {
-  display: none;
-}
-
-.freebirdThemedFilledButtonM2 {
-  background-color: #de9e2c;
 }
 
 /*# sourceMappingURL=style.css.map */
