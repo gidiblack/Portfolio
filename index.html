@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css"/>
     <script src="https://kit.fontawesome.com/93c48aecb0.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -15,6 +16,9 @@
     <title>Gidi's Portfolio</title>
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa fa-angle-double-up"></i>
+    </button>
     <header class="home-header">
         <nav class="nav-bar">
             <div class="container">
@@ -31,7 +35,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="hero container">
+        <div class="hero">
             <p class="text-center">Hello</p>
             <h1 class="text-center">I'm Gideon</h1>
             <p class="heading text-center"><em>Freelance Frontend Developer</em></p>
@@ -40,13 +44,19 @@
     <main>
         <section id="about">
             <div class="container aboutdiv">
-                <figure class="about-img">
-                    <img src="assets/img/gidi.jpg" alt="Gideon Etim">
-                </figure>
-                <h2 class="heading">About Me</h2>
-                <p>Courteous, tenacious and enthusiastic, I am interested in software design & development as well as most things in its orbit. My fascination for web programming, speifically UI/UX development and design started about 2 years ago, during my final year in the University.</p>
-                <p>I hold a Bachelor's degree in Geography and Planning from the University of Lagos, Nigeria. I am keen on broadening my knowledge and improving the skills necessary for excellence in this field.</p>
-                <a href="hireme.html"><button class="btn-accent">Hire Me</button></a>
+                <div class="row">
+                    <div class="col-md-6">
+                        <figure class="about-img" data-aos="fade-right" data-aos-duration="2000">
+                            <img src="assets/img/gidi.jpg" alt="Gideon Etim">
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="heading mb-4">About Me</h2>
+                        <p>Courteous, tenacious and enthusiastic, I am interested in software design & development as well as most things in its orbit. My fascination for web programming, speifically UI/UX development and design started about 2 years ago, during my final year in the University.</p>
+                        <p>I hold a Bachelor's degree in Geography and Planning from the University of Lagos, Nigeria. I am keen on broadening my knowledge and improving the skills necessary for excellence in this field.</p>
+                        <a href="hireme.html"><button class="btn-accent mt-4">Hire Me</button></a>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="services" class="text-center">
@@ -55,20 +65,20 @@
                 <p>An overview of the services I render</p>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="service">
+                        <div class="service" data-aos="fade-right" data-aos-duration="1500">
                             <img src="assets/img/app-design.png" alt="App design">
                             <h3>App design</h3>
                             <p>I design UI wireframes and layouts for smartphones and tablets that give life to your project/product using software applications like Adobe XD and Sketch.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                         <div class="service">
                             <img src="assets/img/web-dev.png" alt="Web Development">
                             <h3>Web Development</h3>
                             <p>I build websites and webapps using HTML, CSS, Javascript, Bootstrap4, SASS and React JS.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="600">
                         <div class="service">
                             <img src="assets/img/web-design.png" alt="Web design">
                             <h3>Web design</h3>
@@ -81,7 +91,7 @@
         <section id="latest-works">
             <div class="container text-center">
                 <h2 class="heading">Some of my Work</h2>
-                <div class="row">
+                <div class="row my-5">
                     <figure class="col-md-6 project">
                         <figcaption class="project-desc">
                             <p>Fitness Hub</p>
@@ -133,5 +143,6 @@
 </body>
 <script src="assets/js/vendors/jquery.min.js"></script>
 <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/app.js"></script>
 </html>

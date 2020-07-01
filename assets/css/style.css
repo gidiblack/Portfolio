@@ -224,6 +224,7 @@ th {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -533,6 +534,7 @@ hr {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 5;
     overflow-x: hidden;
     overflow-y: auto;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
@@ -581,11 +583,17 @@ footer .fab {
   background: url("../img/hero-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 80vh;
+  background-attachment: fixed;
   position: relative;
 }
 .home-header .hero {
-  padding: 6rem 0;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  right: 15%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 .home-header p {
   margin-bottom: 0;
@@ -598,36 +606,26 @@ footer .fab {
 
 #about {
   background: #292525;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 #about .about-img {
   border: 1px solid #de9e2c;
-  width: 220px;
-  height: 220px;
-  float: left;
-  position: relative;
-  top: 16px;
-  right: 16px;
-  margin-right: 60px;
+  width: 75%;
+  margin: 0 auto;
 }
 #about img {
   position: relative;
-  width: 220px;
-  height: auto;
-  margin: 0px 60px 0px 0px;
+  width: 100%;
   box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.4);
   bottom: 16px;
   left: 16px;
-}
-#about .aboutdiv {
-  padding: 2rem 10rem;
 }
 #about .btn-accent {
   border: 0;
 }
 
 #services {
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 #services .service img {
   width: auto;
@@ -666,7 +664,7 @@ footer .fab {
 
 #jumbotron {
   background: #de9e2c;
-  padding: 2rem;
+  padding: 3rem;
 }
 #jumbotron h2, #jumbotron h3, #jumbotron p {
   color: black;
@@ -708,6 +706,25 @@ footer .fab {
     font-size: 32px;
   }
 }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  background-color: #de9e2c;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
 .hireme-header {
   background: url("../img/web-devmac-bg-dark.jpg") no-repeat;
   background-size: cover;

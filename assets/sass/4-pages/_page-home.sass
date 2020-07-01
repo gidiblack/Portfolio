@@ -2,10 +2,16 @@
     background: url("../img/hero-bg.jpg") no-repeat
     background-size: cover
     background-position: center
-    height: 500px
+    height: 80vh
+    background-attachment: fixed
     position: relative
     .hero    
-        padding: 6rem 0
+        position: absolute
+        top: 50%
+        left: 15%
+        right: 15%
+        transform: translateY(-50%)
+        z-index: 1
     p 
         margin-bottom: 0
         font-size: 20px
@@ -15,31 +21,24 @@
 
 #about
     background: #292525
-    padding: 3rem 0
+    padding: 5rem 0
     .about-img
         border: 1px solid #de9e2c
-        width: 220px
-        height: 220px  
-        float: left
-        position: relative
-        top: 16px
-        right: 16px
-        margin-right: 60px
+        width: 75%
+        margin: 0 auto
     img
         position: relative
-        width: 220px
-        height: auto
-        margin: 0px 60px 0px 0px
+        width: 100%
         box-shadow: 8px 6px 6px rgba(0,0,0,0.4)
         bottom: 16px
         left: 16px
-    .aboutdiv
-       padding: 2rem 10rem
+    // .aboutdiv
+    //    padding: 2rem 10rem
     .btn-accent
         border: 0
 
 #services
-    padding: 2rem 0
+    padding: 5rem 0
     .service
         img
             width: auto
@@ -71,7 +70,7 @@
 
 #jumbotron
     background: #de9e2c
-    padding: 2rem
+    padding: 3rem
     h2, h3, p
         color: black
         text-align: center
@@ -100,3 +99,19 @@
             float: none!important
     #jumbotron h3
         font-size: 32px
+
+#myBtn
+    display: none
+    position: fixed
+    bottom: 20px
+    right: 20px
+    z-index: 99
+    border: none
+    background-color: #de9e2c
+    color: white
+    cursor: pointer
+    padding: 12px
+    border-radius: 10px
+    font-size: 16px
+#myBtn:hover
+    background-color: #555
