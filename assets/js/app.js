@@ -17,7 +17,6 @@ function topFunction (){
     document.documentElement.scrollTop = 0;
 }
 $(document).ready(function(){
-    AOS.init(); // initialize aos animations
     // toggle mobile nav menu
     $('.menu-toggle').click(function(){
         $('.responsive-nav').toggleClass("unfold");
