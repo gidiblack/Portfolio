@@ -148,9 +148,9 @@ select {
 }
 
 button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -170,26 +170,26 @@ input {
   line-height: normal;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -261,9 +261,9 @@ section {
 
 .button,
 button,
-input[type=submit],
-input[type=reset],
-input[type=button] {
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   display: inline-block;
   padding: 12px 30px;
   color: white;
@@ -278,50 +278,53 @@ input[type=button] {
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
-.button:hover, .button:active, .button:focus,
+.button:hover,
+.button:active,
+.button:focus,
 button:hover,
 button:active,
 button:focus,
-input[type=submit]:hover,
-input[type=submit]:active,
-input[type=submit]:focus,
-input[type=reset]:hover,
-input[type=reset]:active,
-input[type=reset]:focus,
-input[type=button]:hover,
-input[type=button]:active,
-input[type=button]:focus {
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus {
   outline: 0;
   transform: scale(1.01);
   transform: translateY(3px);
 }
 
 .btn-accent {
-  background-color: #DE9E2C;
+  background-color: #de9e2c;
 }
 
 .btn-accent:hover,
 .btn-accent:focus,
 .btn-accent:active {
   background: #000000;
-  color: #DE9E2C !important;
+  color: #de9e2c !important;
 }
 
 a {
-  color: #0074D9;
+  color: #0074d9;
   text-decoration: none;
   outline: 0;
 }
-a:hover, a:focus {
-  color: #F012BE;
+a:hover,
+a:focus {
+  color: #f012be;
 }
 
 ::selection {
-  background: #FFF498;
+  background: #fff498;
 }
 
 ::-moz-selection {
-  background: #FFF498;
+  background: #fff498;
 }
 
 img::selection {
@@ -332,8 +335,17 @@ img::-moz-selection {
   background: transparent;
 }
 
-.gigantic, .huge, .large, .bigger, .big,
-h1, h2, h3, h4, h5, h6 {
+.gigantic,
+.huge,
+.large,
+.bigger,
+.big,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #fff;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -347,47 +359,56 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -2px;
 }
 
-.huge, h1 {
+.huge,
+h1 {
   font-size: 64px;
   line-height: 1.05;
 }
 @media only screen and (max-width: 680px) {
-  .huge, h1 {
+  .huge,
+  h1 {
     font-size: 44px;
   }
 }
 
-.large, h2 {
+.large,
+h2 {
   font-size: 40px;
   line-height: 1.14;
 }
 @media only screen and (max-width: 680px) {
-  .large, h2 {
+  .large,
+  h2 {
     font-size: 32px;
   }
 }
 
-.bigger, h3 {
+.bigger,
+h3 {
   font-size: 26px;
   line-height: 1.38;
 }
 @media only screen and (max-width: 680px) {
-  .bigger, h3 {
+  .bigger,
+  h3 {
     font-size: 22px;
   }
 }
 
-.big, h4 {
+.big,
+h4 {
   font-size: 22px;
   line-height: 1.38;
 }
 @media only screen and (max-width: 680px) {
-  .big, h4 {
+  .big,
+  h4 {
     font-size: 18px;
   }
 }
 
-.small, small {
+.small,
+small {
   font-size: 10px;
   line-height: 1.2;
 }
@@ -452,7 +473,8 @@ hr {
 .main-nav a:hover {
   color: #de9e2c;
 }
-.main-nav a.button, .main-nav a.button:hover {
+.main-nav a.button,
+.main-nav a.button:hover {
   color: #fff;
 }
 .main-nav .cta {
@@ -478,7 +500,9 @@ hr {
   display: none;
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
+.hamburger,
+.hamburger::before,
+.hamburger::after {
   content: "";
   display: block;
   background: #d7c6c6;
@@ -666,7 +690,9 @@ footer .fab {
   background: #de9e2c;
   padding: 3rem;
 }
-#jumbotron h2, #jumbotron h3, #jumbotron p {
+#jumbotron h2,
+#jumbotron h3,
+#jumbotron p {
   color: black;
   text-align: center;
 }
