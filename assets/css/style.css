@@ -300,6 +300,7 @@ input[type="button"]:focus {
 
 .btn-accent {
   background-color: #de9e2c;
+  border-radius: 8px;
 }
 
 .btn-accent:hover,
@@ -668,6 +669,8 @@ footer .fab {
 }
 #latest-works .project img {
   width: 100%;
+  height: 17rem;
+  object-fit: contain;
 }
 #latest-works .project .btn-accent {
   padding: 10px 16px;
