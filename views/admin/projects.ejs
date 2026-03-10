@@ -1,22 +1,31 @@
-<h2>Manage Projects</h2>
-<a href="/admin/projects/new">Add Project</a>
-<table border="1">
-  <tr><th>Title</th><th>Description</th><th>Order</th><th>Tags</th><th>Image</th><th>Published</th><th>Actions</th></tr>
-  <% projects.forEach(function(project) { %>
-    <tr>
-      <td><%= project.title %></td>
-      <td><%= project.description %></td>
-      <td><%= project.order %></td>
-      <td><%= project.technologies ? project.technologies.join(', ') : '' %></td>
-      <td><%= project.imageUrl ? project.imageUrl : '' %></td>
-      <td><%= project.published ? 'Yes' : 'No' %></td>
-      <td>
-        <a href="/admin/projects/<%= project._id %>/edit">Edit</a> |
-        <form method="POST" action="/admin/projects/<%= project._id %>/delete" style="display:inline">
-          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-          <button type="submit">Delete</button>
-        </form>
-      </td>
-    </tr>
-  <% }) %>
-</table>
+<div class="admin-page">
+  <div class="admin-container">
+    <div class="admin-card">
+      <h2>Manage Projects</h2>
+      <div class="admin-actions"><a class="btn-primary" href="/admin/projects/new">Add Project</a></div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <tr><th>Title</th><th>Description</th><th>Order</th><th>Tags</th><th>Image</th><th>Published</th><th>Actions</th></tr>
+          <% projects.forEach(function(project) { %>
+            <tr>
+              <td><%= project.title %></td>
+              <td><%= project.description %></td>
+              <td><%= project.order %></td>
+              <td><%= project.technologies ? project.technologies.join(', ') : '' %></td>
+              <td><%= project.imageUrl ? project.imageUrl : '' %></td>
+              <td><%= project.published ? 'Yes' : 'No' %></td>
+              <td>
+                <a href="/admin/projects/<%= project._id %>/edit">Edit</a>
+                <span> | </span>
+                <form class="inline-form" method="POST" action="/admin/projects/<%= project._id %>/delete">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button class="btn-secondary" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

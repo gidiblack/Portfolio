@@ -40,10 +40,17 @@
 #services
     padding: 5rem 0
     .service
+        transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease
+        border-radius: 10px
+        background: none
+        padding: 1.25rem
         img
             width: auto
             height: 100px
             margin: 16px 0
+        &:hover, &:focus-within
+            transform: translateY(-6px)
+            box-shadow: 0 18px 40px rgba(10,20,30,0.08)
 
 #latest-works
     padding: 2rem 0
@@ -60,6 +67,9 @@
             color: #ffffff
             font-size: 16px
             margin: 12px 0
+        &:hover, &:focus-within
+            transform: translateY(-6px)
+            box-shadow: 0 18px 40px rgba(10,20,30,0.08)
     .project-desc
         text-align: center
         color: #ffffff

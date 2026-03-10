@@ -1,12 +1,20 @@
-<h2>Admin Login</h2>
+<div class="admin-page">
+  <div class="admin-container">
+    <div class="admin-card">
+      <h2>Admin Login</h2>
 
-<% if (error) { %>
-  <p><%= error %></p>
-<% } %>
+      <% if (error) { %>
+        <p class="admin-alert error"><%= error %></p>
+      <% } %>
 
-<form method="POST" action="/admin/login">
-  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-  <label>Username: <input type="text" name="username" required /></label><br />
-  <label>Password: <input type="password" name="password" required /></label><br />
-  <button type="submit">Login</button>
-</form>
+      <form class="admin-form" method="POST" action="/admin/login">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <label>Username: <input type="text" name="username" required /></label>
+        <label>Password: <input type="password" name="password" required /></label>
+        <div class="admin-actions">
+          <button class="btn-primary" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

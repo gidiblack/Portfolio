@@ -1,15 +1,21 @@
-<h2><%= project ? 'Edit' : 'Add' %> Project</h2>
-<% if (error) { %>
-  <p><%= error %></p>
-<% } %>
-<form method="POST" action="<%= project ? '/admin/projects/' + project._id + '/edit' : '/admin/projects/new' %>">
-  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-  <label>Title: <input type="text" name="title" value="<%= project ? project.title : '' %>" required></label><br>
-  <label>Description: <input type="text" name="description" value="<%= project ? project.description : '' %>" required></label><br>
-  <label>Order: <input type="number" name="order" value="<%= project ? project.order : 0 %>" required></label><br>
-  <label>Tags (comma separated): <input type="text" name="technologies" value="<%= project && project.technologies ? project.technologies.join(', ') : '' %>"></label><br>
-  <label>Project URL: <input type="text" name="projectUrl" value="<%= project ? project.projectUrl : '' %>"></label><br>
-  <label>Image URL: <input type="text" name="imageUrl" value="<%= project ? project.imageUrl : '' %>"></label><br>
-  <label>Published: <input type="checkbox" name="published" <%= project && project.published ? 'checked' : '' %>></label><br>
-  <button type="submit">Save</button>
-</form>
+<div class="admin-page">
+  <div class="admin-container">
+    <div class="admin-card">
+      <h2><%= project ? 'Edit' : 'Add' %> Project</h2>
+      <% if (error) { %>
+        <p class="admin-alert error"><%= error %></p>
+      <% } %>
+      <form class="admin-form" method="POST" action="<%= project ? '/admin/projects/' + project._id + '/edit' : '/admin/projects/new' %>">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <label>Title: <input type="text" name="title" value="<%= project ? project.title : '' %>" required></label>
+        <label>Description: <input type="text" name="description" value="<%= project ? project.description : '' %>" required></label>
+        <label>Order: <input type="number" name="order" value="<%= project ? project.order : 0 %>" required></label>
+        <label>Tags (comma separated): <input type="text" name="technologies" value="<%= project && project.technologies ? project.technologies.join(', ') : '' %>"></label>
+        <label>Project URL: <input type="text" name="projectUrl" value="<%= project ? project.projectUrl : '' %>"></label>
+        <label>Image URL: <input type="text" name="imageUrl" value="<%= project ? project.imageUrl : '' %>"></label>
+        <label>Published: <input type="checkbox" name="published" <%= project && project.published ? 'checked' : '' %>></label>
+        <div class="admin-actions"><button class="btn-primary" type="submit">Save</button></div>
+      </form>
+    </div>
+  </div>
+</div>

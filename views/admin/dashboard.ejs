@@ -1,14 +1,22 @@
-<h1>Admin Dashboard</h1>
-<ul>
-  <li><a href="/admin/hero">Edit Hero</a></li>
-  <li><a href="/admin/about">Edit About</a></li>
-  <li><a href="/admin/services">Manage Services</a></li>
-  <li><a href="/admin/projects">Manage Projects</a></li>
-  <li><a href="/admin/social">Manage Social Links</a></li>
-  <li><a href="/admin/resume">Manage Resume</a></li>
-</ul>
+<div class="admin-page">
+  <div class="admin-container">
+    <div class="admin-card">
+      <h1>Admin Dashboard</h1>
+      <ul>
+        <li><a href="/admin/hero">Edit Hero</a></li>
+        <li><a href="/admin/about">Edit About</a></li>
+        <li><a href="/admin/services">Manage Services</a></li>
+        <li><a href="/admin/projects">Manage Projects</a></li>
+        <li><a href="/admin/social">Manage Social Links</a></li>
+        <li><a href="/admin/resume">Manage Resume</a></li>
+      </ul>
 
-<form method="POST" action="/admin/logout">
-  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-  <button type="submit">Logout</button>
-</form>
+      <form method="POST" action="/admin/logout">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <div class="admin-actions">
+          <button class="btn-secondary" type="submit">Logout</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

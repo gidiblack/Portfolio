@@ -1,0 +1,154 @@
+// Admin page styling: gradient background, card layout, form and table system
+
+// Use existing palette values where available
+$admin-gradient-start: $ocean
+$admin-gradient-end: #f7fbff
+
+.admin-page
+    min-height: 100vh
+    padding: 3rem 1.5rem
+    background: linear-gradient(180deg, $admin-gradient-start 0%, $admin-gradient-end 100%)
+    // ensure content sits above background textures
+
+    .admin-container
+        max-width: 1000px
+        margin: 0 auto
+
+.admin-card
+    background: white
+    border-radius: 12px
+    padding: 1.5rem
+    box-shadow: 0 6px 18px rgba(15, 23, 40, 0.06)
+    border: 1px solid rgba(0,0,0,0.04)
+    margin-bottom: 1.5rem
+    // ensure readable text on white cards
+    color: #0b0b0b
+
+.admin-form
+    display: block
+    label
+        display: block
+        margin-bottom: 0.5rem
+        font-weight: 600
+        color: #0b0b0b
+    input, textarea, select
+        width: 100%
+        padding: 0.6rem 0.75rem
+        border-radius: 8px
+        border: 1px solid rgba(0,0,0,0.12)
+        background: #fff
+        box-shadow: none
+        margin-bottom: 0.75rem
+        color: #0b0b0b
+        &::placeholder
+            color: rgba(0,0,0,0.45)
+        &:focus
+            outline: none
+            box-shadow: 0 0 0 3px rgba(0, 173, 255, 0.12)
+            border-color: rgba(0, 173, 255, 0.9)
+
+    // helper and error text
+    .form-helper
+        font-size: 0.85rem
+        color: rgba(0,0,0,0.6)
+        margin-top: -0.25rem
+        margin-bottom: 0.5rem
+
+    .form-error
+        font-size: 0.85rem
+        color: #b91c1c
+        margin-top: -0.25rem
+        margin-bottom: 0.5rem
+
+    // checkbox rows
+    .checkbox-row
+        display: flex
+        align-items: center
+        gap: 0.5rem
+        input[type="checkbox"]
+            width: 18px
+            height: 18px
+            margin: 0
+            accent-color: $ocean
+        label
+            margin: 0
+
+.admin-actions
+    display: flex
+    gap: 0.75rem
+    flex-wrap: wrap
+
+.btn-primary
+    background: $ocean
+    color: #fff
+    padding: 0.6rem 1rem
+    border-radius: 8px
+    border: none
+    cursor: pointer
+    &:hover
+        transform: translateY(-2px)
+        box-shadow: 0 10px 20px rgba(0,0,0,0.06)
+    :focus-visible
+        outline: none
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible
+    box-shadow: 0 0 0 4px rgba(0, 173, 255, 0.14)
+
+h1, h2
+    color: #0b0b0b
+@media (prefers-reduced-motion: reduce)
+    .admin-table tbody tr,
+    .btn-primary,
+    .btn-secondary
+        transition: none !important
+
+.btn-secondary
+    background: transparent
+    color: #111
+    padding: 0.45rem 0.8rem
+    border-radius: 8px
+    border: 1px solid rgba(0,0,0,0.08)
+
+.admin-table-wrap
+    overflow-x: auto
+    margin-top: 0.75rem
+
+.admin-table
+    width: 100%
+    border-collapse: collapse
+    th, td
+        padding: 0.75rem 0.8rem
+        text-align: left
+        color: #0b0b0b
+    thead
+        background: rgba(0,0,0,0.03)
+        th
+            font-weight: 700
+    tbody tr
+        border-bottom: 1px solid rgba(0,0,0,0.04)
+        transition: background 120ms ease, transform 160ms ease
+        &:hover
+            background: rgba(0,0,0,0.02)
+            transform: translateY(-2px)
+
+.inline-form
+    display: inline-block
+    margin: 0
+
+.admin-alert
+    padding: 0.6rem 0.8rem
+    border-radius: 8px
+    margin-bottom: 0.75rem
+    &.error
+        background: #ffecec
+        color: #b91c1c
+    &.success
+        background: #ecfff2
+        color: #0a7a3d
+
+@media screen and (max-width: 768px)
+    .admin-card
+        padding: 1rem
+    .admin-actions
+        flex-direction: column
+        gap: 0.5rem

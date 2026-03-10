@@ -1,16 +1,22 @@
-<h2><%= link ? 'Edit' : 'Add' %> Social Link</h2>
-<form method="POST" action="<%= link ? '/admin/social/' + link._id + '/edit' : '/admin/social/new' %>">
-  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-  <label>Platform:
-    <select name="platform" required>
-      <option value="">Select</option>
-      <% ['GitHub','LinkedIn','Twitter','Facebook','Instagram','Other'].forEach(function(p) { %>
-        <option value="<%= p %>" <%= link && link.platform === p ? 'selected' : '' %>><%= p %></option>
-      <% }) %>
-    </select>
-  </label><br>
-  <label>URL: <input type="url" name="url" value="<%= link ? link.url : '' %>" required></label><br>
-  <label>Order: <input type="number" name="order" value="<%= link ? link.order : 0 %>" required></label><br>
-  <label>Published: <input type="checkbox" name="published" <%= link && link.published ? 'checked' : '' %>></label><br>
-  <button type="submit">Save</button>
-</form>
+<div class="admin-page">
+  <div class="admin-container">
+    <div class="admin-card">
+      <h2><%= link ? 'Edit' : 'Add' %> Social Link</h2>
+      <form class="admin-form" method="POST" action="<%= link ? '/admin/social/' + link._id + '/edit' : '/admin/social/new' %>">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <label>Platform:
+          <select name="platform" required>
+            <option value="">Select</option>
+            <% ['GitHub','LinkedIn','Twitter','Facebook','Instagram','Other'].forEach(function(p) { %>
+              <option value="<%= p %>" <%= link && link.platform === p ? 'selected' : '' %>><%= p %></option>
+            <% }) %>
+          </select>
+        </label>
+        <label>URL: <input type="url" name="url" value="<%= link ? link.url : '' %>" required></label>
+        <label>Order: <input type="number" name="order" value="<%= link ? link.order : 0 %>" required></label>
+        <label>Published: <input type="checkbox" name="published" <%= link && link.published ? 'checked' : '' %>></label>
+        <div class="admin-actions"><button class="btn-primary" type="submit">Save</button></div>
+      </form>
+    </div>
+  </div>
+</div>

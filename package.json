@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js",
+    "dev": "npx sass assets/sass/main.sass assets/css/style.css --no-source-map --style=compressed && node --watch server.js",
     "seed": "node src/scripts/seed.js",
     "create-admin": "node src/scripts/createAdmin.js",
     "test": "echo \"No tests configured\""
