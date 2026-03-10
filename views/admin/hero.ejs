@@ -1,0 +1,14 @@
+<h2>Edit Hero Section</h2>
+<% if (error) { %>
+  <p><%= error %></p>
+<% } %>
+<form method="POST" action="/admin/hero">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+  <label>Headline: <input type="text" name="headline" value="<%= hero ? hero.headline : '' %>" required /></label><br />
+  <label
+    >Subheadline: <input type="text" name="subheadline" value="<%= hero ? hero.subheadline : '' %>" required /></label
+  ><br />
+  <label>CTA Text: <input type="text" name="ctaText" value="<%= hero ? hero.ctaText : '' %>" required /></label><br />
+  <label>CTA URL: <input type="text" name="ctaUrl" value="<%= hero ? hero.ctaUrl : '' %>" required /></label><br />
+  <button type="submit">Save</button>
+</form>

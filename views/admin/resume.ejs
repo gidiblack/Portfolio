@@ -1,0 +1,16 @@
+<h2>Manage Resume</h2>
+
+<% if (error) { %>
+  <p><%= error %></p>
+<% } %>
+
+<% if (resumeAsset && resumeAsset.currentUrl) { %>
+  <p>Current Resume: <a href="<%= resumeAsset.currentUrl %>" target="_blank" rel="noopener noreferrer"><%= resumeAsset.fileName || 'View Resume' %></a></p>
+<% } else { %>
+  <p>No resume uploaded yet.</p>
+<% } %>
+
+<form method="POST" action="/admin/resume?_csrf=<%= csrfToken %>" enctype="multipart/form-data">
+  <label>Upload PDF (max <%= maxSizeMb %> MB): <input type="file" name="resumeFile" accept="application/pdf,.pdf" required /></label><br />
+  <button type="submit">Upload Resume</button>
+</form>

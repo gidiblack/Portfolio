@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/93c48aecb0.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <title>Gideon's Portfolio</title>
+  </head>
+  <body id="top">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa fa-angle-double-up"></i>
+    </button>
+    <header class="home-header">
+      <nav class="nav-bar">
+        <div class="container">
+          <ul class="main-nav">
+            <li>
+              <a class="logo" href="/"><img src="/assets/img/gidi-logo.png" /></a>
+            </li>
+            <div id="responsive-nav" class="responsive-nav">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li>
+                <a href="/hireme" class="cta"><button class="btn-accent">Hire me</button></a>
+              </li>
+            </div>
+            <li class="menu-toggle">
+              <div class="hamburger"></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="hero">
+        <p class="text-center">Hello</p>
+        <h1 class="text-center"><%= hero ? hero.headline : "I'm Gideon" %></h1>
+        <p class="heading text-center">
+          <em><%= hero ? hero.subheadline : "Frontend Software Engineer" %></em>
+        </p>
+      </div>
+    </header>
+    <main>
+      <section id="about">
+        <div class="container aboutdiv">
+          <div class="row">
+            <div class="col-md-6">
+              <figure class="about-img" data-aos="fade-right" data-aos-duration="2000">
+                <img src="/assets/img/gideon.jpg" alt="Gideon Etim" />
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <h2 class="heading mb-4">About Me</h2>
+              <p><%= about ? about.bio : "" %></p>
+              <% if (about && about.highlights && about.highlights.length) { %>
+              <p><%= about.highlights.join(". ") %>.</p>
+              <% } %>
+              <a href="/hireme"><button class="btn-accent mt-4"><%= hero && hero.ctaText ? hero.ctaText : "Hire Me" %></button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="text-center">
+        <div class="container">
+          <h2 class="heading">Services</h2>
+          <p>An overview of the services I render</p>
+          <div class="row">
+            <% (services || []).forEach(function(service, index) { %>
+            <div class="col-md-4" <%= index === 2 ? 'data-aos="fade-left" data-aos-duration="1500" data-aos-delay="600"' : '' %>>
+              <div
+                class="service"
+                <%= index === 0 ? 'data-aos="fade-right" data-aos-duration="1500"' : '' %>
+                <%= index === 1 ? 'data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"' : '' %>
+              >
+                <img src="<%= service.icon || '/assets/img/web-dev.png' %>" alt="<%= service.title %>" />
+                <h3><%= service.title %></h3>
+                <p><%= service.description %></p>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+      <section id="latest-works">
+        <div class="container text-center">
+          <h2 class="heading">Some of my Work</h2>
+          <div class="row my-5">
+            <% (projects || []).forEach(function(project) { %>
+            <figure class="col-md-6 project">
+              <figcaption class="project-desc">
+                <p><%= project.title %></p>
+              </figcaption>
+              <img src="<%= project.imageUrl || '/assets/img/emmatob-academy.png' %>" alt="<%= project.title %>" />
+              <% if (project.projectUrl) { %>
+              <a href="<%= project.projectUrl %>" target="_blank" rel="noreferrer"
+                ><button class="btn-accent">Visit page</button></a
+              >
+              <% } %>
+            </figure>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+      <section id="jumbotron">
+        <div class="container">
+          <h3>Have a project in mind?</h3>
+          <a href="/hireme"><button class="btn-accent">Hire Me</button></a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container text-center">
+        <p>&copy Gideon Etim 2025</p>
+        <% const iconMap = { Twitter: 'twitter', GitHub: 'github', LinkedIn: 'linkedin', WhatsApp: 'whatsapp', Facebook: 'facebook', Instagram: 'instagram' }; %>
+        <% (socialLinks || []).forEach(function(link) { const iconName = iconMap[link.platform] || 'link'; %>
+        <a href="<%= link.url %>" target="_blank" rel="noreferrer"><i class="fab fa-<%= iconName %> fa-2x"></i></a>
+        <% }) %>
+      </div>
+    </footer>
+  </body>
+  <script src="/assets/js/vendors/jquery.min.js"></script>
+  <script src="/assets/js/vendors/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script>
+    $(document).ready(function () {
+      AOS.init();
+    });
+  </script>
+</html>

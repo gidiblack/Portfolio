@@ -1,0 +1,20 @@
+<h2>Manage Social Links</h2>
+<a href="/admin/social/new">Add Social Link</a>
+<table border="1">
+  <tr><th>Platform</th><th>URL</th><th>Order</th><th>Published</th><th>Actions</th></tr>
+  <% socialLinks.forEach(function(link) { %>
+    <tr>
+      <td><%= link.platform %></td>
+      <td><%= link.url %></td>
+      <td><%= link.order %></td>
+      <td><%= link.published ? 'Yes' : 'No' %></td>
+      <td>
+        <a href="/admin/social/<%= link._id %>/edit">Edit</a> |
+        <form method="POST" action="/admin/social/<%= link._id %>/delete" style="display:inline">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</table>

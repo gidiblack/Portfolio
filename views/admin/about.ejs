@@ -1,0 +1,15 @@
+<h2>Edit About Section</h2>
+<% if (error) { %>
+  <p><%= error %></p>
+<% } %>
+<form method="POST" action="/admin/about">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+  <label>Bio:<br /><textarea name="bio" required><%= about ? about.bio : '' %></textarea></label><br />
+  <label
+    >Highlights (comma separated):<br /><input
+      type="text"
+      name="highlights"
+      value="<%= about && about.highlights ? about.highlights.join(', ') : '' %>" /></label
+  ><br />
+  <button type="submit">Save</button>
+</form>

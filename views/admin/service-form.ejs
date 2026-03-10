@@ -1,0 +1,12 @@
+<h2><%= service ? 'Edit' : 'Add' %> Service</h2>
+<% if (error) { %>
+  <p><%= error %></p>
+<% } %>
+<form method="POST" action="<%= service ? '/admin/services/' + service._id + '/edit' : '/admin/services/new' %>">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+  <label>Title: <input type="text" name="title" value="<%= service ? service.title : '' %>" required></label><br>
+  <label>Description: <input type="text" name="description" value="<%= service ? service.description : '' %>" required></label><br>
+  <label>Order: <input type="number" name="order" value="<%= service ? service.order : 0 %>" required></label><br>
+  <label>Published: <input type="checkbox" name="published" <%= service && service.published ? 'checked' : '' %>></label><br>
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,20 @@
+<h2>Manage Services</h2>
+<a href="/admin/services/new">Add Service</a>
+<table border="1">
+  <tr><th>Title</th><th>Description</th><th>Order</th><th>Published</th><th>Actions</th></tr>
+  <% services.forEach(function(service) { %>
+    <tr>
+      <td><%= service.title %></td>
+      <td><%= service.description %></td>
+      <td><%= service.order %></td>
+      <td><%= service.published ? 'Yes' : 'No' %></td>
+      <td>
+        <a href="/admin/services/<%= service._id %>/edit">Edit</a> |
+        <form method="POST" action="/admin/services/<%= service._id %>/delete" style="display:inline">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</table>
